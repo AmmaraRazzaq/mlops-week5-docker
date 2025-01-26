@@ -1,0 +1,5 @@
+outs:
+- md5: e2c44f80f8a8b50f36ee4323688069d6
+  size: 89391502
+  hash: md5
+  path: yolov8l-pose.pt
