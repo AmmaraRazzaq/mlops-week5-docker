@@ -1,2 +1,5 @@
 selected_frames/
-yolov8l-pose.pt
+*.pt
+models/*.pt
+creds.json
+
