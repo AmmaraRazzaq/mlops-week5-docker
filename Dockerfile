@@ -4,6 +4,9 @@ FROM python:3.9-slim
 # Set working directory in the container
 WORKDIR /app
 
+# Copy the application code into the container
+COPY . .
+
 # Install system dependencies required for OpenCV
 RUN apt-get update && apt-get install -y \
     libgl1-mesa-glx \
@@ -26,9 +29,6 @@ RUN dvc remote modify storage gdrive_service_account_json_file_path creds.json
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
-
-# Copy the application code into the container
-COPY . .
 
 # pulling the trained model
 RUN dvc pull models/yolov8l-pose.pt.dvc
