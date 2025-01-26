@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./week_6_github_actions
+        working-directory: ./week_5_docker
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -19,4 +19,3 @@ jobs:
           docker build --tag inference:latest .
           docker run -d -p 8000:8000 --network data --name inference_container inference:latest
 
-          
