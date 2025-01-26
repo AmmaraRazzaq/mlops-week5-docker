@@ -1,5 +1,5 @@
 selected_frames/
 *.pt
 models/*.pt
-creds.json
+
 
